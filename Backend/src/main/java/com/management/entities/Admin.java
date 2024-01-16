@@ -16,8 +16,7 @@ import java.util.List;
 //generer constructeur
 @AllArgsConstructor
 @NoArgsConstructor
-//
-//@Builder
+
 public class Admin {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

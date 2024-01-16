@@ -57,12 +57,15 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         user.getAuthorities().forEach(a->{
             roles.add(a.getAuthority());
         });
+        // Créer le JWT
         String jwt= JWT.create()
                 .withSubject(user.getUsername())
                 .withArrayClaim("roles",roles.toArray(new String[roles.size()]))
                 .withExpiresAt(new Date(System.currentTimeMillis()+SecurityParameters.EXPIRATION_TIME))
                 .sign(Algorithm.HMAC256(SecurityParameters.SECRET));
+
+        // Ajouter le JWT à l'en-tête de la réponse
         response.addHeader("Authorization", jwt);
-                ;
+
     }
 }
