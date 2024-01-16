@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>rento</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      
+      <!-- style css -->
+      <link rel="stylesheet" href="vehicule-card.component.css">
+      <!-- Responsive-->
+      
+
+
+   </head>
+   <body>
+    <div class="price" [ngClass]="{'limitTextHeight': isReadMore}">
+        <p>
+           {{vehicule.marque}}<br>
+        </p><p>
+           Prix: {{vehicule.prix}}DH/Jour.<br>
+           Modele:{{vehicule.modele}}.<br>
+           Kilometrage:20000km.<br>
+           Gasoil| BV Manuelle| 5 passagers<br> 5 portes|
+           2 valises| 4 sacs| 6 Ch. Fisc.| A/C : Oui | GPS : Non
+        </p>
+       </div>
+       <button type="button" (click)="showText()" id="myBtn">{{ isReadMore ? 'Read More': 'Read Less' }}</button>
+   
+      </body>
+</html>

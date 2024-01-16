@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>rento</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      
+      <!-- style css -->
+      <link rel="stylesheet" href="home.component.css">
+      <!-- Responsive-->
+      
+
+
+   </head> 
+   <body class="main-layout">
+      <div class="hero_area">
+         <!-- header section strats -->
+         <header class="header_section">
+           <div class="container-fluid">
+             <nav class="navbar navbar-expand-lg custom_nav-container">
+               <a class="navbar-brand" [routerLink]="['/home']">
+                 <span>
+                   RentCar
+                 </span>
+     
+               </a>
+     </nav>
+     
+                 </div>
+               
+            
+         
+       </header>
+       <section class=" slider_section position-relative">
+         <div class="slider_container">
+           <div class="img-box" ><br>
+             <img src="https://gogoacarrentals.com/wp-content/themes/gogoa/images/services/1.png" alt="" height="400px">
+           </div>
+           <div class="detail_container">
+             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                 <div class="carousel-item active">
+                   <div class="detail-box"><br>
+                    <h1 style="margin-left: 50px;">
+                       Reserver avec <br>
+                      un  Appel <br>
+   
+                     </h1>
+                     <a   style="margin-left: 120px;" [routerLink]="['/login']">
+                       Login
+                     </a>
+                     <br>
+                   </div><br><br>
+                 </div>
+               </div>
+             </div>
+           </div>
+   
+         </div>
+       </section>
+      </div>
+
+      <br>
+
+
+      <!-- choose  section -->
+      <div class="choose ">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>Pourquoi nous choisir </h2>
+                     <span> </span>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="choose_box">
+                     <span>01</span>
+                     <p>Tarifs compétitifs et transparence des prix : Nous nous engageons à offrir des tarifs compétitifs et une totale transparence des prix. Notre système de réservation en ligne vous permet de voir immédiatement les tarifs pour chaque véhicule et période de location, sans frais cachés ni surprises de dernière minute. De plus, nous proposons régulièrement des offres spéciales et des réductions pour que vous puissiez profiter de tarifs avantageux et économiser sur votre location de voiture. </p>
+                  </div>
+               </div>
+               <div class="col-md-12">
+                  <div class="choose_box">
+                     <span>02</span>
+                     <p> Vaste sélection de véhicules : Notre site web de location de voitures propose une vaste sélection de véhicules pour répondre à tous les besoins et préférences de nos clients. Que vous ayez besoin d'une petite citadine pour une escapade en ville, d'un SUV spacieux pour une aventure en plein air ou d'une voiture de luxe pour une occasion spéciale, nous avons le véhicule idéal pour vous. Notre large gamme de modèles et d'options vous permet de trouver la voiture parfaite en fonction de votre style de conduite et de votre budget.</p>
+                  </div>
+               </div>
+               <div class="col-md-12">
+                  <div class="choose_box">
+                     <span>03</span>
+                     <p>Service client exceptionnel : Chez [Nom de votre site de location de voitures], nous accordons une grande importance à la satisfaction de nos clients. Notre équipe dévouée et professionnelle est là pour vous aider à chaque étape de votre expérience de location, que ce soit pour répondre à vos questions, vous guider dans le processus de réservation ou vous fournir une assistance en cas de besoin. Nous nous efforçons de vous offrir un service client de premier ordre, avec une attention personnalisée pour garantir que votre expérience de location soit sans tracas et agréable du début à la fin. </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <br>
+      <!-- end choose  section -->
+       <!-- rent section -->
+
+       
+<!-- ... Autres balises HTML ... -->
+
+<section class="rent_section layout_padding">
+  <div class="container">
+    <div class="rent_container">
+      <div *ngFor="let vehicule of vehicules" class="box">
+         <div class="img-box">
+           <img [src]="'assets/img/' + vehicule.image" alt="Image du véhicule" height="50">
+         </div>
+         <vehicule-card [vehicule]="vehicule"></vehicule-card>
+         <br>
+       </div>
+    </div>
+  </div>
+</section>
+
+       <!--  footer -->
+      <footer>
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="cont_call">
+                        <h3> <strong class="multi color_chang"> Call Now</strong><br>
+                           (+212) 0522101010
+                        </h3>
+                     </div>
+                     <div class="cont">
+                        <h3> <strong class="multi"> Reserver</strong>
+                           votre voiture des maintenant!
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <p>© 2023 All Rights Reserved. Design by <a > RentCart</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+       <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+         
+      </body>
+
+</html>
