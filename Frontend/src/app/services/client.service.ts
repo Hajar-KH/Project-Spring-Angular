@@ -4,6 +4,7 @@ import { HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http'
 import { Observable, catchError } from 'rxjs';
 import { apiURL } from '../config';
 import { AuthService } from './auth.service';
+
 const httpOptions:{headers:HttpHeaders}={
   headers : new HttpHeaders({
     'content-Type' : 'application/json'
@@ -13,6 +14,7 @@ const httpOptions:{headers:HttpHeaders}={
 @Injectable({
   providedIn: 'root'
 })
+
 export class ClientService {
   jwt :string ="Bearer"+this.auth.getToken();
   httpHeaders =new HttpHeaders({"Authorization":this.jwt})
