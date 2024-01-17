@@ -11,7 +11,6 @@ import java.util.List;
 
 @Entity
 //generer getters et setters
-
 @Data
 //generer constructeur
 @AllArgsConstructor
